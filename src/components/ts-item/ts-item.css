@@ -1,0 +1,19 @@
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+  height: auto;
+  padding: 0 0.2vw;
+  transition: 0.6s ease;
+  transform: translateX(0);
+}
+
+:host:first-child {
+  padding-left: 0;
+}
+
+
+.item-inner-container {
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+}

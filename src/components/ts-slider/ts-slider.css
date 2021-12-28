@@ -1,0 +1,87 @@
+
+
+:host {
+  display: block;
+  overflow-x: hidden;
+  position: relative;
+  padding: 0 4%;
+  overflow-y: visible;
+  --top-slider-padding: 30px;
+}
+
+:host > button {
+  position: absolute;
+  top: var(--top-slider-padding);
+  bottom: 0;
+  width: calc(4% - 0.2vw);
+  background: rgba(77, 77, 77, 0.4);
+  cursor: pointer;
+  z-index: 20;
+  border: none;
+  border-radius: 5px;
+  padding: 0 0.2vw;
+}
+
+:host > button.control-hidden {
+  visibility: hidden;
+}
+
+:host > button:hover {
+  background: rgba(77, 77, 77, 0.7);
+}
+:host > button > i{
+  visibility: hidden;
+}
+
+:host > button:hover > i{
+  visibility: visible;
+}
+
+:host > button.next {
+  right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+:host > button.next.final-state {
+  visibility: hidden;
+}
+
+
+
+:host > button.prev {
+  left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+:host > button.prev.initial-state {
+  visibility: hidden;
+}
+
+.slider {
+  padding-top: var(--top-slider-padding);
+  width: auto;
+  white-space: nowrap;
+  transition: transform 300ms ease-in-out;
+}
+
+.steps {
+  position: absolute;
+  right: calc(4% + 0.2vw);
+  top: 10px;
+  display: flex;
+}
+
+.steps > .step-item {
+  width: 20px;
+  height: 4px;
+  background-color: grey;
+  margin-right: 2px;
+  transition: all 300ms ease-in-out;
+}
+
+.steps > .step-item.step-active {
+  background-color: rgb(59, 59, 59);
+}
+
