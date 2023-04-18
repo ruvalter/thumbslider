@@ -12,6 +12,7 @@ export namespace Components {
     }
     interface TsSlider {
         "displayCount": number;
+        "skipCount": number;
     }
 }
 declare global {
@@ -46,6 +47,7 @@ declare namespace LocalJSX {
     }
     interface TsSlider {
         "displayCount"?: number;
+        "skipCount"?: number;
     }
     interface IntrinsicElements {
         "testing-component": TestingComponent;

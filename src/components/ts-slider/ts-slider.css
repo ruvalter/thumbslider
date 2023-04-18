@@ -1,5 +1,3 @@
-
-
 :host {
   display: block;
   overflow-x: hidden;
@@ -12,7 +10,7 @@
 :host > button {
   position: absolute;
   top: var(--top-slider-padding);
-  bottom: 0;
+  bottom: 4%;
   width: calc(4% - 0.2vw);
   background: rgba(77, 77, 77, 0.4);
   cursor: pointer;
@@ -29,11 +27,11 @@
 :host > button:hover {
   background: rgba(77, 77, 77, 0.7);
 }
-:host > button > i{
+:host > button > i {
   visibility: hidden;
 }
 
-:host > button:hover > i{
+:host > button:hover > i {
   visibility: visible;
 }
 
@@ -46,8 +44,6 @@
 :host > button.next.final-state {
   visibility: hidden;
 }
-
-
 
 :host > button.prev {
   left: 0;
@@ -84,4 +80,3 @@
 .steps > .step-item.step-active {
   background-color: rgb(59, 59, 59);
 }
-
